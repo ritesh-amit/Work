@@ -113,7 +113,7 @@ class _SellPageState extends State<SellPage> {
                         Spacer(),
                         Container(
                           padding: EdgeInsets.symmetric(
-                              vertical: h * 8, horizontal: b * 15),
+                              vertical: h * 5, horizontal: b * 10),
                           alignment: Alignment.centerLeft,
                           width: b * 200,
                           decoration: BoxDecoration(
@@ -135,7 +135,7 @@ class _SellPageState extends State<SellPage> {
                     textRow('Delivery Charge'),
                     sh(10),
                     textRow('Offer %'),
-                    sh(20),
+                    sh(30),
                     Container(
                       child: MaterialButton(
                         onPressed: () {},
@@ -182,7 +182,7 @@ class _SellPageState extends State<SellPage> {
           child: TextField(
             //controller: emailController,
             keyboardType: TextInputType.emailAddress,
-            style: txtS(Colors.grey, 14, FontWeight.w400),
+            style: txtS(Colors.grey, 12, FontWeight.w400),
             decoration: dec(title, false),
           ),
         ),
@@ -200,12 +200,12 @@ class _SellPageState extends State<SellPage> {
       hintText: txt,
       hintStyle: TextStyle(
         color: Colors.grey,
-        fontSize: b * 14,
+        fontSize: b * 12,
         fontWeight: FontWeight.w400,
       ),
       isDense: true,
       contentPadding: EdgeInsets.symmetric(
-          vertical: SizeConfig.screenHeight * 10 / 640,
+          vertical: SizeConfig.screenHeight * 8 / 640,
           horizontal: SizeConfig.screenWidth * 10 / 360),
     );
   }
