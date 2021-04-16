@@ -34,6 +34,8 @@ dependencies:
   pinput: ^1.2.0
   table_calendar: ^3.0.0
   firebase_auth:
+  carousel_slider: ^3.0.0
+  carousel_pro:
 
 dev_dependencies:
   flutter_test:
