@@ -34,14 +34,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    var h = SizeConfig.screenHeight / 896;
-    var b = SizeConfig.screenWidth / 412;
+    var h = SizeConfig.screenHeight / 640;
+    var b = SizeConfig.screenWidth / 360;
 
     return SafeArea(
       child: Scaffold(
           bottomNavigationBar: Container(
-            color: Colors.transparent,
-            height: h * 71,
+            color: Colors.white,
+            height: h * 55,
             child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
               AnimatedAlign(
                 alignment: Alignment(_getIndicatorPosition(_selectedIndex), 0),
@@ -49,35 +49,37 @@ class _HomePageState extends State<HomePage> {
                 duration: duration,
                 child: Container(
                   color: Color(0xff0faae2) ?? Colors.transparent,
-                  width: b * 412 / items.length,
-                  height: h * 2,
+                  width: b * 360 / items.length,
+                  height: b * 3,
                 ),
               ),
               BottomNavigationBar(
                 backgroundColor: Colors.white,
-                selectedItemColor: Color(0xff0faae2),
+                selectedItemColor: Colors.black,
+                selectedLabelStyle: TextStyle(fontWeight: FontWeight.w700),
+                unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
                 elevation: 10,
-                selectedFontSize: SizeConfig.screenWidth * 14 / 414,
-                unselectedFontSize: SizeConfig.screenWidth * 12 / 414,
-                unselectedItemColor: Color(0xff130f26),
+                selectedFontSize: b * 16,
+                unselectedFontSize: b * 14,
+                unselectedItemColor: Colors.grey,
                 type: BottomNavigationBarType.fixed,
                 currentIndex: _selectedIndex,
                 items: [
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.phone),
+                    icon: Container(),
                     label: 'Menu',
                   ),
                   BottomNavigationBarItem(
                     label: 'Order',
-                    icon: Icon(Icons.phone),
+                    icon: Container(),
                   ),
                   BottomNavigationBarItem(
                     label: 'Pay-In',
-                    icon: Icon(Icons.phone),
+                    icon: Container(),
                   ),
                   BottomNavigationBarItem(
                     label: 'Profile',
-                    icon: Icon(Icons.phone),
+                    icon: Container(),
                   ),
                 ],
                 onTap: (index) {
